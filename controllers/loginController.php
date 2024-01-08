@@ -12,7 +12,11 @@ class loginController extends Controller {
             $users = new Users();
 
             if($users->verifyUser($unumber, $upass)) {
+                $token = $users->createToken($unumber);
+                $_SESSION['token'] = $token;
 
+                header("Location: ".BASE_URL);
+                exit;
             }else {
                 $data['msg'] = 'Número e/ou senha inválidos!';
             }
