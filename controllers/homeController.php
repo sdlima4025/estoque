@@ -23,5 +23,10 @@ class homeController extends Controller {
 
         $this->loadTemplate('home', $data);
     }
+    public function add() {
+        $data = array();
+
+        $this->loadTemplate('add', $data);
+    }
 
 }
