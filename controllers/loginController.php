@@ -1,7 +1,9 @@
 <?php
 class loginController extends Controller {
     public function index() {
-        $data = array();
+        $data = array(
+            'msg'=> ''
+        );
 
         if(!empty($_POST['number'])) {
             $unumber = $_POST['number'];
