@@ -1,4 +1,11 @@
-<a href="<?php echo BASE_URL; ?>home/add">Adicionar Produto</a>
+<a href="<?php echo BASE_URL; ?>home/add">Adicionar Produto</a><br/><br/>
+
+<fieldset>
+    <form  method="GET">
+        <input type="text" id="busca" name="busca" placeholder="Digete o Código ou Nome do Produto" 
+        style="width: 30%;height: 30px;font-size: 18px;"/>
+    </form>
+</fieldset>
 
 <table border="1" width="100%">
     <tr>
@@ -20,3 +27,6 @@
         </tr>
     <?php endforeach; ?>
 </table>
+<script type="text/javascript">
+    document.getElementById("busca").focus();
+</script>
