@@ -12,6 +12,43 @@ class Products extends Model {
         }
         return $array;
     }
+    // future de verificação de existencia de cod cadastrado
+    public function addProduct($cod, $name, $price, $quantity, $min_quantity) {
+        $sql = "INSERT INTO products (cod, name, price, quantity, min_quantity ) 
+        VALUES(:cod, :name, :price, :quantity, :min_quantity)";
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(":cod", $cod);
+        $sql->bindValue(":name", $name);
+        $sql->bindValue(":price", $price);
+        $sql->bindValue(":quantity", $quantity);
+        $sql->bindValue(":min_quantity", $min_quantity);
+        $sql-> execute();
+    }
+    public function editProduct($cod, $name, $price, $quantity, $min_quantity, $id) {
 
+        $sql = "UPDATE products SET cod = :cod, name = :name, price = :price, 
+            quantity = :quantity, min_quantity = :min_quantity WHERE id = :id";
+             $sql = $this->db->prepare($sql);
+             $sql->bindValue(":cod", $cod);
+             $sql->bindValue(":name", $name);
+             $sql->bindValue(":price", $price);
+             $sql->bindValue(":quantity", $quantity);
+             $sql->bindValue(":min_quantity", $min_quantity);
+             $sql->bindValue(":id", $id);
+             $sql-> execute();
+    }
+    public function getProduct($id) {
+        $array = array();
 
+        $sql = "SELECT * FROM products WHERE id = :id";
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(":id", $id);
+        $sql->execute();
+
+        if($sql->rowCount() > 0) {
+            $array = $sql->fetch();
+        }
+        return $array;
+    }
 }
+
