@@ -17,7 +17,13 @@ class homeController extends Controller {
         $data = array();
         $p = new Products();
 
-        $data['list'] = $p->getProducts();
+        $s = '';
+
+        if(!empty($_GET['busca'])) {
+            $s = $_GET['busca'];
+        }
+
+        $data['list'] = $p->getProducts($s);
         // verificando o token em tela
         // print_r($_SESSION['token']);
 
