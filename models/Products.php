@@ -1,8 +1,7 @@
 <?php
-class Products extends Model
-{
+class Products extends Model {
 
-    public function getProducts($s = null)
+    public function getProducts($s = '')
     {
         $array = array();
 

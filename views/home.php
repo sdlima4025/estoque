@@ -17,7 +17,7 @@
         <th>Qtd.</th>
         <th>Ações</th>
     </tr>
-    <?php foreach ($list as $item) : ?>
+    <?php foreach ($list as $item): ?>
         <tr>
             <td><?php echo $item['cod']; ?></td>
             <td><?php echo $item['name']; ?></td>

@@ -52,6 +52,7 @@ class homeController extends Controller {
     public function edit($id) {
         $data = array();
             $p = new Products();
+
             if(!empty($_POST['cod'])) {
                 $cod = $_POST['cod'];
                 $name = $_POST['name'];
@@ -61,9 +62,7 @@ class homeController extends Controller {
     
                 $p->editProduct($cod, $name, $price, $quantity, $min_quantity, $id);
 
-                header("Location ".BASE_URL);
-                exit;
-    
+                header("Location:".BASE_URL);
             }
 
             $data['info'] = $p->getProduct($id);

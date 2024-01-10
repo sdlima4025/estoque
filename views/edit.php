@@ -1,5 +1,7 @@
 <h1>Editar Produto:</h1>
+
 <a href="<?php echo BASE_URL; ?>">Voltar</a><br/><br/>
+
 <form  method="POST">
 
     Código de Barras:<br/>
@@ -17,7 +19,7 @@
     Qtd. Minima:<br/>
     <input type="text" name="min_quantity" value="<?php echo $info['min_quantity']; ?>" required/><br/><br/>
 
-    <input type="submit" value="Editar">
+    <input type="submit" value="Salvar">
 
 </form>
 
