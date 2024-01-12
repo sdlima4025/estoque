@@ -1,19 +1,86 @@
-/* @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
-
-* {
+ @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;	
     font-family: Raleway, sans-serif;
-}
-
-body {
-    /* background: linear-gradient(90deg, #C7C5F4, #776BCC);		
-    
 } 
-    */
+    
 
 .container {
    max-width: 1000px;
    margin: auto;
+}
+nav ul,
+nav ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header {
+    background-color: #DDD;
+    margin-bottom: 20px;
+    height: 40px;
+}
+.header nav {
+    max-width: 1000px;
+    margin: auto;
+}
+.header li {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+}
+.header li a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.header li a:hover {
+    background-color: #EEE;
+}
+table th {
+    background-color: #DDD;
+    padding: 5px;
+}
+table td {
+    border: 1px solid #DDD;
+    padding: 5px;
+}
+table tr:hover td {
+    background-color: #DDD;
+}
+
+table a {
+    color: #00ff;
+    text-decoration: none;
+}
+table a:hover {
+    text-decoration: underline;
+}
+#busca {
+    outline: 0;
+    border: 0;
+}
+.form input[type='text'],
+.form select,
+.form textarea {
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    padding-left: 10px;
+    border: 2px solid #DDD;
+    outline: 0;
+}
+.form input[type=submit] {
+    background: #CCC;
+	padding: 5px 10px;
+	border-radius: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+
 }

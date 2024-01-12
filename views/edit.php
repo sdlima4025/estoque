@@ -1,8 +1,6 @@
 <h1>Editar Produto:</h1>
 
-<a href="<?php echo BASE_URL; ?>">Voltar</a><br/><br/>
-
-<form  method="POST">
+<form  method="POST" class="form">
 
     Código de Barras:<br/>
     <input type="text" name="cod" value="<?php echo $info['cod']; ?>" required/><br/><br/>

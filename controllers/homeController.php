@@ -36,7 +36,11 @@ class homeController extends Controller {
         $this->loadTemplate('home', $data);
     }
     public function add() {
-        $data = array();
+        $data = array(
+            'menu' => array(
+                BASE_URL => 'Voltar'
+            )
+        );
         $p = new Products();
 
         if(!empty($_POST['cod'])) {
@@ -56,7 +60,11 @@ class homeController extends Controller {
     }
 
     public function edit($id) {
-        $data = array();
+        $data = array(
+            'menu' => array(
+                BASE_URL => 'Voltar'
+            )
+        );
             $p = new Products();
 
             if(!empty($_POST['cod'])) {

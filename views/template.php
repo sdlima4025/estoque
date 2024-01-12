@@ -12,7 +12,7 @@
 		<nav>
 			<ul>
 				<?php foreach($viewData['menu'] as $url => $menutitle):  ?>
-					<li><a href="<?php echo $uel; ?>"><?php echo $menutitle; ?></a></li>
+					<li><a href="<?php echo $url; ?>"><?php echo $menutitle; ?></a></li>
 				<?php endforeach; ?>
 			</ul>
 		</nav>
