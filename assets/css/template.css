@@ -82,5 +82,13 @@ table a:hover {
 	font-weight: bold;
 	text-transform: uppercase;
 	cursor: pointer;
-
+}
+.warning {
+    border: 1px solid #FF0000;
+    background-color: #FF5555;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding: 10px;
 }
